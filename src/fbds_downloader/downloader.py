@@ -10,16 +10,6 @@ class Downloader:
         self.output_dir = output_dir
         os.makedirs(output_dir, exist_ok=True)
 
-    def __str__(self):
-            return f"Downloader(url={self.url}, uf={self.uf}, county={self.county}, file_to_download={self.file_to_download}, output_dir={self.output_dir})"
-        
-    def check_already_downloaded(self):
-        output_path = os.path.join(self.output_dir, f'{self.file_to_download}_{self.uf}_{self.county}.tar')
-        if os.path.exists(output_path):
-            print(f"Arquivo já existe em: {output_path}")
-            return output_path
-        return False
-
     def download_tar(self):
         data = {
             'action': 'download',  # Include the 'action' parameter
@@ -40,10 +30,3 @@ class Downloader:
         
         return output_path
     
-# if __name__ == "__main__":
-#     downloader = Downloader(url='https://geo.fbds.org.br/', 
-#                             uf='PR', county='CURITIBA', 
-#                             file_to_download='APP', 
-#                             output_dir=r'C:\FBDS_Downloader\FBDS_Downloader\tests\test_data')
-#     if not downloader.check_already_downloaded():
-#         downloader.download_tar()

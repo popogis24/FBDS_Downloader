@@ -1,0 +1,16 @@
+title = "TOML Taesa"
+
+[owner]
+name = ""
+
+[BASIC]
+url = "https://geo.fbds.org.br/"
+output_dir = "output_dir"
+
+
+[EMAIL]
+host = "smtp-mail.outlook.com"
+port = 587
+username = "correio@carusojrea.com.br"
+password = "Lof13882"
+email_receiver = "anderson@giscaruso.com.br"

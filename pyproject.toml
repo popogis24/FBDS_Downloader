@@ -9,6 +9,13 @@ dependencies = [
     "pytest>=8.2.0",
     "requests>=2.31.0",
     "patool>=2.2.0",
+    "tomli>=2.0.1",
+    "geopandas>=0.14.4",
+    "pyshp>=2.3.1",
+    "ipykernel>=6.29.4",
+    "fastapi>=0.110.3",
+    "uvicorn>=0.29.0",
+    "nicegui>=1.4.9",
 ]
 requires-python = ">=3.11"
 readme = "README.md"
