@@ -1,6 +1,9 @@
 import os
+import shutil
 import patoolib
 import geopandas as gpd
+
+
 class Converter:
     def __init__(self, file_path: str, output_dir: str):
         self.file_path = file_path
@@ -43,3 +46,10 @@ class Converter:
                 
                 gpd.pd.concat(read_file, ignore_index=True).to_file(os.path.join(self.output_dir, i[1] + ".shp"))
 
+    def zipfiles(self):
+        try:
+            zipped_file = shutil.make_archive(self.output_dir, 'zip', self.output_dir)
+            return zipped_file
+        except Exception as e:
+            print(f"Erro ao compactar o arquivo: {e}")
+        

@@ -7,10 +7,10 @@ name = ""
 url = "https://geo.fbds.org.br/"
 output_dir = "C:\\FBDS_Downloader\\FBDS_Downloader\\tests\\output"
 
-
 [EMAIL]
 host = "smtp-mail.outlook.com"
 port = 587
 username = "correio@carusojrea.com.br"
 password = "Lof13882"
 email_receiver = "anderson@giscaruso.com.br"
+

@@ -35,9 +35,11 @@ class Pipeline:
             output_dir = os.path.join(self.output_dir, 'merged_shapefiles')
             converter = Converter(file, output_dir)
         converter.merge_shapefiles(list_of_files)
+        zipped_files = converter.zipfiles()
+        return zipped_files
 
     def run(self):
         list_of_files = self.get_list_of_files()
-        self.get_merged_shapefiles(list_of_files)
-        return list_of_files
+        output = self.get_merged_shapefiles(list_of_files)
+        return output
         
