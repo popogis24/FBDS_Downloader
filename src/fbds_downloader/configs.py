@@ -1,7 +1,7 @@
 import tomli as toml
 
 class Config:
-    def __init__(self, filepath=r"C:\FBDS_Downloader\FBDS_Downloader\settings.toml"):
+    def __init__(self, filepath=r"./settings.toml"):
         with open(filepath, "rb") as file:  # Open the file in binary mode
             self.settings = toml.load(file)
 
