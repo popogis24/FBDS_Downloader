@@ -1,0 +1,10 @@
+title = "TOML"
+
+[owner]
+name = ""
+
+[BASIC]
+url = "https://geo.fbds.org.br/"
+output_dir = "FBDS_Downloader/output"
+
+
